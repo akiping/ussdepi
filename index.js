@@ -45,10 +45,10 @@ handleDisconnect();
 
 // In-memory storage for votes (for simplicity)
 let votes = {
-    "KAYITESI. ": 0,
-    "CHARTINE. ": 0,
     "EPIPHANIE. ": 0,
-    "HENRIETTE. ": 0,
+    "CHARTINE. ": 0,
+    "EMMY. ": 0,
+    "ISLA. ": 0,
     "DAMARS. ": 0
 };
 
@@ -96,8 +96,9 @@ app.post('/ussd', (req, res) => {
             } else {
                 // Voting option selected
                 response = userLanguages[phoneNumber] === 'en' ? 
-                    `CON Select a candidate:\n1. kayitesi chartine\n2. chartine mutesi\n3. epiphanie nyira\n4. umugwaneza henriette\n5. niyomukiza damars` : 
-                    `CON Hitamo umukandida:\n1. kayitesi chartine\n2. chartine mutesi\n3. epiphanie nyira\n4. umugwaneza henriette\n5. niyomukiza damars`;
+                    `CON Select a candidate:\n1.epiphanie nyirambonigaba\n2. chartine kayitesi\n3. tuyizere emmy\n4. niyigena isla\n5. niyomukiza damars` : 
+                    `CON Hitamo umukandida:\n1. epiphanie nyirambonigaba\n2. chartine kayitesi\n3.tuyizere emmy\n4.  niyigena isla\n5. niyomukiza damars`;
+            }
             }
         } else if (userInput[2] === '2') {
             // View votes option selected
